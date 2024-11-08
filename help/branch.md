@@ -5,9 +5,9 @@ After you clone the repo new you will start working..
 ```bash
 $ git pull origin main
 ```
-3. Create branch: replace `<bramchName>` with any name. for example `create-about-page`
+3. Create branch: replace `<branchName>` with any name. for example `create-about-page`
 ```
-$ git checkout -b <bramchName>
+$ git checkout -b <branchName>
 ```
 4. Start working.
 5. Add the files and commits: replace `<message>` with simple documentation for your working
@@ -17,7 +17,7 @@ $ git commit -m "<message>"
 ```
 6. Push the changes to your fork repo:
 ```bash
-$ git push origin <bramchName>
+$ git push origin <branchName>
 ```
 7. Back to main branch:
 ```bash
