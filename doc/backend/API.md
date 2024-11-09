@@ -18,6 +18,7 @@
         "username": "<username>",
         "password": "<password>",
         "email": "<email>",
+        "name": "<full-name>", 
         "gender": true
     }
     ```
@@ -58,6 +59,7 @@
         "username": "<username>",
         "password": "<password>",
         "email": "<email>",
+        "name": "<full-name>", 
         "gender": true,
         "createAt": "<timestamp>"
     }
@@ -76,6 +78,7 @@
         "username": "<username>",
         "password": "<password>",
         "email": "<email>",
+        "name": "<full-name>", 
         "gender": true,
         "createAt": "<timestamp>"
     }
@@ -104,6 +107,7 @@
                 "username": "<username>",
                 "password": "<password>",
                 "email": "<email>",
+                "name": "<full-name>", 
                 "gender": true,
                 "createAt": "<timestamp>"
             },
@@ -111,6 +115,7 @@
                 "username": "<username>",
                 "password": "<password>",
                 "email": "<email>",
+                "name": "<full-name>", 
                 "gender": true,
                 "createAt": "<timestamp>"
             }
