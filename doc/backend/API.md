@@ -18,7 +18,7 @@
         "username": "<username>",
         "password": "<password>",
         "email": "<email>",
-        "name": "<full-name>", 
+        "name": "<full-name>",
         "gender": true
     }
     ```
@@ -60,6 +60,7 @@
         "password": "<password>",
         "email": "<email>",
         "name": "<full-name>", 
+        "role": "<user-or-admin>",
         "gender": true,
         "createAt": "<timestamp>"
     }
@@ -108,6 +109,7 @@
                 "password": "<password>",
                 "email": "<email>",
                 "name": "<full-name>", 
+                "role": "<user-or-admin>",
                 "gender": true,
                 "createAt": "<timestamp>"
             },
@@ -116,6 +118,7 @@
                 "password": "<password>",
                 "email": "<email>",
                 "name": "<full-name>", 
+                "role": "<user-or-admin>",
                 "gender": true,
                 "createAt": "<timestamp>"
             }
