@@ -8,7 +8,7 @@ import { ConfigService } from '@nestjs/config';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const configService = app.get<ConfigService>(ConfigService);
-  const PORT = parseInt( configService.get<string>('SERVER_PORT', '3000'), 10 );
+  const PORT = 0 | configService.get<number>('SERVER_PORT', 3000) ;
   await app.listen(PORT);
 }
 bootstrap();
