@@ -13,9 +13,6 @@ export const typeormConfig: TypeOrmModuleAsyncOptions = {
         database: configService.get<string>('DATABASE_NAME', 'test_team'),
         entities: [UserEntity],
         synchronize: configService.get<string>('DATABASE_SYNC') === 'true',
-        ssl: { 
-            rejectUnauthorized: configService.get<string>('DATABAE_SSL') === 'true'
-        }
     }),
     inject: [ConfigService]
 }
