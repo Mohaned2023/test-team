@@ -26,6 +26,16 @@
     - Response:
         - Access Token -> Cookies
         - Refresh Token -> Cookies
+    ```json
+    {
+        "username": "<username>",
+        "email": "<email>",
+        "name": "<full-name>", 
+        "role": "<user-or-admin>",
+        "gender": true,
+        "createAt": "<timestamp>"
+    }
+    ```
 
 - `POST /api/auth/login`
     - Request:
@@ -38,6 +48,16 @@
     - Response:
         - Access Token -> Cookies
         - Refresh Token -> Cookies
+    ```json
+    {
+        "username": "<username>",
+        "email": "<email>",
+        "name": "<full-name>", 
+        "role": "<user-or-admin>",
+        "gender": true,
+        "createAt": "<timestamp>"
+    }
+    ```
 
 - `POST /api/auth/refresh`
     - Request:
@@ -47,6 +67,16 @@
     - Response:
         - Access Token -> Cookies
         - Refresh Token -> Cookies
+    ```json
+    {
+        "username": "<username>",
+        "email": "<email>",
+        "name": "<full-name>", 
+        "role": "<user-or-admin>",
+        "gender": true,
+        "createAt": "<timestamp>"
+    }
+    ```
 
 - `GET /api/auth/{username}`
     - Request:
@@ -57,7 +87,6 @@
     ```json
     {
         "username": "<username>",
-        "password": "<password>",
         "email": "<email>",
         "name": "<full-name>", 
         "role": "<user-or-admin>",
@@ -77,7 +106,6 @@
     ```json
     {
         "username": "<username>",
-        "password": "<password>",
         "email": "<email>",
         "name": "<full-name>", 
         "gender": true,
@@ -106,7 +134,6 @@
         "users": [
             {
                 "username": "<username>",
-                "password": "<password>",
                 "email": "<email>",
                 "name": "<full-name>", 
                 "role": "<user-or-admin>",
@@ -115,7 +142,6 @@
             },
             {
                 "username": "<username>",
-                "password": "<password>",
                 "email": "<email>",
                 "name": "<full-name>", 
                 "role": "<user-or-admin>",
