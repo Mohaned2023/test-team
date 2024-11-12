@@ -14,6 +14,8 @@ services:
       - DATABASE_SYNC=false
       - DATABAE_SSL=true
       - SERVER_PORT=3000
+      - JWT_SECRET="password123"
+      - JWT_ACCESS_TOKEN_EXPIRESIN=3h
     depends_on:
       - postgres
   frontend:
