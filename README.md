@@ -31,6 +31,9 @@ roles and working as a team.
 - [create issue.](./help/issue.md)
 - [i made a mistake!]()
 
+# Docs:
+- [API.](./doc/backend/API.md)
+- [Database.](./doc/backend/DB.md)
 --- 
 ### Team Members
 > [Mohaned2023](https://github.com/Mohaned2023)\

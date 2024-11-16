@@ -4,8 +4,11 @@ import { UserEntity } from './user.entity';
 import { JwtModule } from '@nestjs/jwt';
 import { PassportModule } from '@nestjs/passport';
 import { JwtConfig } from 'src/configs/jwt.config';
+import { ConfigModule } from '@nestjs/config';
+import { AuthController } from './auth.controller';
+import { AuthService } from './auth.service';
+import { JwtAuthGuard } from './guards/jwt.guard';
 import { JwtStrategy } from './jwt.strategy';
-import { ConfigModule, ConfigService } from '@nestjs/config';
 
 /**
  * This module use for authorizing\
@@ -19,6 +22,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
         PassportModule.register({defaultStrategy: 'jwt'}),
         JwtModule.registerAsync(JwtConfig)
     ],
-    providers: [ ConfigService, JwtStrategy ]
+    providers: [ JwtStrategy, AuthService, JwtAuthGuard ],
+    controllers: [AuthController]
 })
 export class AuthModule {}
