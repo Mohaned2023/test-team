@@ -1,9 +1,10 @@
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { BaseEntity, Column, Entity, Index, PrimaryGeneratedColumn } from "typeorm";
 import { UserRole } from "./role.enum";
 
 @Entity({name: 'users'})
 export class UserEntity extends BaseEntity {
     @PrimaryGeneratedColumn()
+    @Index()
     id: number;
 
     @Column({unique: true, length: 50})

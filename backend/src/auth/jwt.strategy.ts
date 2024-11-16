@@ -5,7 +5,7 @@ import { JwtPayloadInterface } from "./interfaces.auth";
 import { UserEntity } from "./user.entity";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Repository } from "typeorm";
-import { Injectable, UnauthorizedException } from "@nestjs/common";
+import { Inject, Injectable, UnauthorizedException } from "@nestjs/common";
 import { omitObjectKeys } from "src/utils/omit.util";
 
 /**
@@ -17,7 +17,7 @@ import { omitObjectKeys } from "src/utils/omit.util";
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {
     constructor(
-        private configService: ConfigService,
+        @Inject(ConfigService) configService: ConfigService,
         @InjectRepository(UserEntity) private userRepository: Repository<UserEntity>
     ) {
         super({
