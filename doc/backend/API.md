@@ -95,6 +95,7 @@ A detailed explanation of all endpoints with complete clarity.
         - OK `201 - Created`: User created.
         - ERROR `302 - Found`: Username or Email is found in the database!.
         - ERROR `400 - Bad Request`: Request body is missing some fields.
+        - ERROR `429 - Too Many Requests`: More than 3req/1s or 10req/20s or 30req/1m.
         - ERROR `500 - Internal Server Error`: Backend failure -> submit an issue in github.
 ---
 ### Login
@@ -145,6 +146,7 @@ A detailed explanation of all endpoints with complete clarity.
         - ERROR `400 - Bad Request`: Request body is missing some fields.
         - ERROR `401 - Unauthorized`: Invalid password.
         - ERROR `404 - Not Found`: User with username not found.
+        - ERROR `429 - Too Many Requests`: More than 3req/1s or 10req/20s or 30req/1m.
         - ERROR `500 - Internal Server Error`: Backend failure -> submit an issue in github.
 ---
 ### Get New Access Token
@@ -174,6 +176,7 @@ A detailed explanation of all endpoints with complete clarity.
         - OK `200 - Ok`: ok.
         - ERROR `401 - Unauthorized`: Invalid refresh token.
         - ERROR `404 - Not Found`: User not found.
+        - ERROR `429 - Too Many Requests`: More than 3req/1s or 10req/20s or 30req/1m.
         - ERROR `500 - Internal Server Error`: Backend failure -> submit an issue in github.
     - Notes:
         - status code 401 -> the user has been inactive for more than 7 days or has not logged in.
@@ -228,6 +231,7 @@ A detailed explanation of all endpoints with complete clarity.
         - ERROR `400 - Bad Request`: Invalid username.
         - ERROR `401 - Unauthorized`: Invalid accessToken.
         - ERROR `404 - Not Found`: User with username not found.
+        - ERROR `429 - Too Many Requests`: More than 3req/1s or 10req/20s or 30req/1m.
         - ERROR `500 - Internal Server Error`: Backend failure -> submit an issue in github.
 ---
 ### Update User Information
@@ -313,6 +317,7 @@ A detailed explanation of all endpoints with complete clarity.
         - ERROR `401 - Unauthorized`: Invalid accessToken.
         - ERROR `403 - Forbidden`: User tried to update another account without admin permission.
         - ERROR `404 - Not Found`: User with username not found.
+        - ERROR `429 - Too Many Requests`: More than 3req/1s or 10req/20s or 30req/1m.
         - ERROR `500 - Internal Server Error`: Backend failure -> submit an issue in github.
 ---
 ### Delete User
@@ -350,6 +355,7 @@ A detailed explanation of all endpoints with complete clarity.
         - ERROR `401 - Unauthorized`: Invalid accessToken.
         - ERROR `403 - Forbidden`: User tried to delete another account without admin permission.
         - ERROR `404 - Not Found`: User with username not found.
+        - ERROR `429 - Too Many Requests`: More than 3req/1s or 10req/20s or 30req/1m.
         - ERROR `500 - Internal Server Error`: Backend failure -> submit an issue in github.
     - Notes:
         - if this account is admin than you can delete any account.
@@ -401,13 +407,14 @@ A detailed explanation of all endpoints with complete clarity.
         - ERROR `401 - Unauthorized`: Invalid accessToken.
         - ERROR `403 - Forbidden`: User is not admin.
         - ERROR `404 - Not Found`: Start and end out of range.
+        - ERROR `429 - Too Many Requests`: More than 3req/1s or 10req/20s or 30req/1m.
         - ERROR `500 - Internal Server Error`: Backend failure -> submit an issue in github.
 - Notes:
     - The Role of this endpoint is ADMIN.
 ---
 ### Get Number of Users
 - API Endponit: `/api/v1/auth/length`
-- Mathod: `POST`
+- Mathod: `GET`
 - Description: Get Number of Users.
 - Request body:
     - `Request body is not requires`.
@@ -421,6 +428,7 @@ A detailed explanation of all endpoints with complete clarity.
     ```
     - Status codes:
         - OK `201 - Created`: User created.
+        - ERROR `429 - Too Many Requests`: More than 3req/1s or 10req/20s or 30req/1m.
         - ERROR `500 - Internal Server Error`: Backend failure -> submit an issue in github.
 
 ## Authers:
