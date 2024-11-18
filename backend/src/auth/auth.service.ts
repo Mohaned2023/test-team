@@ -58,7 +58,7 @@ export class AuthService {
         user.username = createUserDto.username.toLowerCase();
         user.name = createUserDto.name;
         user.email = createUserDto.email.toLowerCase();
-        user.gender = createUserDto.gender || user.gender;
+        user.gender = createUserDto.gender !== false ;
         user.solt = await bcrypt.genSalt(
             0 | this.configService.get<number>('USER_PASSWORD_SOLT_RANGE', 12)
         );
