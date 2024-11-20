@@ -16,7 +16,7 @@ export const typeormConfig: TypeOrmModuleAsyncOptions = {
         password: configService.get<string>('DATABASE_PASSWORD', 'postgres'),
         database: configService.get<string>('DATABASE_NAME', 'test_team'),
         entities: [UserEntity],
-        synchronize: configService.get<string>('DATABASE_SYNC') === 'true',
+        synchronize: configService.get<string>('DATABSAE_SSL') === 'true',
     }),
     inject: [ConfigService]
 }
